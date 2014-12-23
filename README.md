@@ -8,7 +8,6 @@ future charges.
 
 - Intro
 - Requeriments
-- Installation
 - Configuration and Setup
 - Contributing & Attribution
 - License
