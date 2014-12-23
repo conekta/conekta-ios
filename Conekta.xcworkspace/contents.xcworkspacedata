@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Token.swift">
+   </FileRef>
+   <FileRef
+      location = "container:Conekta.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Card.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Connection.swift">
+   </FileRef>
+   <FileRef
+      location = "group:ConektaExample/ConektaExample.xcodeproj">
+   </FileRef>
+</Workspace>
