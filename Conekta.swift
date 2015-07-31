@@ -13,6 +13,8 @@ class Conekta: NSObject, DeviceCollectorSDKDelegate {
     // DC params
     internal let dcCollectionUrl: String = "https://api.conekta.io/fraud_providers/kount/logo.htm"
     internal let dcMerchantId: String = "205000"
+    internal let device = UIDevice()
+    internal let dc = DeviceCollectorSDK(debugOn: true)
     
     let publicKey: String
     
@@ -36,12 +38,10 @@ class Conekta: NSObject, DeviceCollectorSDKDelegate {
     }
     
     internal func setDeviceCollector() {
-        let dc = DeviceCollectorSDK(debugOn: true)
-        dc.setMerchantId("205000")
-        dc.setCollectorUrl("https://api.conekta.io/fraud_providers/kount/logo.htm")
         dc.setDelegate(self)
-        let device = UIDevice()
-        dc.collect(device.identifierForVendor.UUIDString)
+        dc.setMerchantId(self.dcMerchantId)
+        dc.setCollectorUrl(self.dcCollectionUrl)
+        dc.collect(self.device.identifierForVendor.UUIDString)
     }
     
     func onCollectorStart() {
