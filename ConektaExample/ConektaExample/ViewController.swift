@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tokenizeCard(sender : AnyObject) {
-        var conekta = Conekta(publicKey: "key_EVryd61Uhsq9d6Z2")
+        var conekta = Conekta(publicKey: "key_UCmfYCRt5TdUA8ii")
         
         var tarjeta = Card(last4: numberField.text, name: nameField.text, cvc: ccField.text, exp_month: expMonthField.text, exp_year: expYearField.text)
 

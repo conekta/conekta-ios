@@ -5,6 +5,15 @@
       location = "group:Token.swift">
    </FileRef>
    <FileRef
+      location = "group:Conekta-Bridging-Header.h">
+   </FileRef>
+   <FileRef
+      location = "group:DeviceCollector.h">
+   </FileRef>
+   <FileRef
+      location = "group:libDeviceCollectorLibrary.a">
+   </FileRef>
+   <FileRef
       location = "container:Conekta.swift">
    </FileRef>
    <FileRef

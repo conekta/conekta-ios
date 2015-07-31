@@ -7,25 +7,54 @@
 
 import Foundation
 
-class Conekta {
+
+class Conekta: NSObject, DeviceCollectorSDKDelegate {
+    
+    // DC params
+    internal let dcCollectionUrl: String = "https://api.conekta.io/fraud_providers/kount/logo.htm"
+    internal let dcMerchantId: String = "205000"
+    
     let publicKey: String
+    
     init(publicKey: String){
         self.publicKey = publicKey
     }
     
-    func apiKeyAsBase64(apikey: String) -> String {
+    internal func apiKeyAsBase64(apikey: String) -> String {
         let plainData: NSData = apikey.dataUsingEncoding(NSUTF8StringEncoding)!
         let apiKeyBase64Data: NSData = plainData.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(0))
-        let returnValue: String = NSString(data: apiKeyBase64Data, encoding: NSUTF8StringEncoding) as String
+        let returnValue: String = NSString(data: apiKeyBase64Data, encoding: NSUTF8StringEncoding) as! String
         return returnValue
     }
     
 
-    func createToken(card: Card, withSuccess success:()-> Void, withFailure failure:() -> Void ){
+    func createToken(card: Card, withSuccess success:()-> Void, withFailure failure:() -> Void ) {
         var data: AnyObject!
         var c = Connection(data: data)
         c.makeRequest(NSURL(string: "https://api.conekta.io/tokens")!, action: "POST",  apiKeyBase64: self.apiKeyAsBase64(self.publicKey), body: card.asJSONData())
-        
+        self.setDeviceCollector()
     }
+    
+    internal func setDeviceCollector() {
+        let dc = DeviceCollectorSDK(debugOn: true)
+        dc.setMerchantId("205000")
+        dc.setCollectorUrl("https://api.conekta.io/fraud_providers/kount/logo.htm")
+        dc.setDelegate(self)
+        let device = UIDevice()
+        dc.collect(device.identifierForVendor.UUIDString)
+    }
+    
+    func onCollectorStart() {
+        println("START <<<<<<<")
+    }
+    
+    func onCollectorSuccess() {
+        println("SUCCESS <<<<<<<")
+    }
+    
+    func onCollectorError(errorCode: NSInteger, error: NSError) {
+        println("ERROR <<<<<<<<")
+    }
+
 
 }
