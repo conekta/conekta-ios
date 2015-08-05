@@ -13,11 +13,11 @@
 		5C6713191A48E2F000C409F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6713181A48E2F000C409F2 /* Images.xcassets */; };
 		5C67131C1A48E2F000C409F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C67131A1A48E2F000C409F2 /* LaunchScreen.xib */; };
 		5C6713281A48E2F000C409F2 /* ConektaExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6713271A48E2F000C409F2 /* ConektaExampleTests.swift */; };
-		A77AE77B1B72753000F64DF1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AE7751B72753000F64DF1 /* Card.swift */; };
-		A77AE77C1B72753000F64DF1 /* Conekta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AE7761B72753000F64DF1 /* Conekta.swift */; };
-		A77AE77D1B72753000F64DF1 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AE7771B72753000F64DF1 /* Connection.swift */; };
-		A77AE77E1B72753000F64DF1 /* libDeviceCollectorLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AE7791B72753000F64DF1 /* libDeviceCollectorLibrary.a */; };
-		A77AE77F1B72753000F64DF1 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AE77A1B72753000F64DF1 /* Token.swift */; };
+		A77AE7871B72787400F64DF1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AE7811B72787400F64DF1 /* Card.swift */; };
+		A77AE7881B72787400F64DF1 /* Conekta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AE7821B72787400F64DF1 /* Conekta.swift */; };
+		A77AE7891B72787400F64DF1 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AE7831B72787400F64DF1 /* Connection.swift */; };
+		A77AE78A1B72787400F64DF1 /* libDeviceCollectorLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AE7851B72787400F64DF1 /* libDeviceCollectorLibrary.a */; };
+		A77AE78B1B72787400F64DF1 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AE7861B72787400F64DF1 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +41,13 @@
 		5C6713211A48E2F000C409F2 /* ConektaExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConektaExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6713261A48E2F000C409F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C6713271A48E2F000C409F2 /* ConektaExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConektaExampleTests.swift; sourceTree = "<group>"; };
-		A77AE7741B72753000F64DF1 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../sdk/Bridging-Header.h"; sourceTree = "<group>"; };
-		A77AE7751B72753000F64DF1 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = ../sdk/Card.swift; sourceTree = "<group>"; };
-		A77AE7761B72753000F64DF1 /* Conekta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conekta.swift; path = ../sdk/Conekta.swift; sourceTree = "<group>"; };
-		A77AE7771B72753000F64DF1 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = ../sdk/Connection.swift; sourceTree = "<group>"; };
-		A77AE7781B72753000F64DF1 /* DeviceCollectorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceCollectorSDK.h; path = ../sdk/DeviceCollectorSDK.h; sourceTree = "<group>"; };
-		A77AE7791B72753000F64DF1 /* libDeviceCollectorLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDeviceCollectorLibrary.a; path = ../sdk/libDeviceCollectorLibrary.a; sourceTree = "<group>"; };
-		A77AE77A1B72753000F64DF1 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Token.swift; path = ../sdk/Token.swift; sourceTree = "<group>"; };
+		A77AE7801B72787400F64DF1 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Conekta-SDK/Bridging-Header.h"; sourceTree = "<group>"; };
+		A77AE7811B72787400F64DF1 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = "../Conekta-SDK/Card.swift"; sourceTree = "<group>"; };
+		A77AE7821B72787400F64DF1 /* Conekta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conekta.swift; path = "../Conekta-SDK/Conekta.swift"; sourceTree = "<group>"; };
+		A77AE7831B72787400F64DF1 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = "../Conekta-SDK/Connection.swift"; sourceTree = "<group>"; };
+		A77AE7841B72787400F64DF1 /* DeviceCollectorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceCollectorSDK.h; path = "../Conekta-SDK/DeviceCollectorSDK.h"; sourceTree = "<group>"; };
+		A77AE7851B72787400F64DF1 /* libDeviceCollectorLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDeviceCollectorLibrary.a; path = "../Conekta-SDK/libDeviceCollectorLibrary.a"; sourceTree = "<group>"; };
+		A77AE7861B72787400F64DF1 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Token.swift; path = "../Conekta-SDK/Token.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A77AE77E1B72753000F64DF1 /* libDeviceCollectorLibrary.a in Frameworks */,
+				A77AE78A1B72787400F64DF1 /* libDeviceCollectorLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,13 +129,13 @@
 		A77AE7731B72751100F64DF1 /* Conekta-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				A77AE7741B72753000F64DF1 /* Bridging-Header.h */,
-				A77AE7751B72753000F64DF1 /* Card.swift */,
-				A77AE7761B72753000F64DF1 /* Conekta.swift */,
-				A77AE7771B72753000F64DF1 /* Connection.swift */,
-				A77AE7781B72753000F64DF1 /* DeviceCollectorSDK.h */,
-				A77AE7791B72753000F64DF1 /* libDeviceCollectorLibrary.a */,
-				A77AE77A1B72753000F64DF1 /* Token.swift */,
+				A77AE7801B72787400F64DF1 /* Bridging-Header.h */,
+				A77AE7811B72787400F64DF1 /* Card.swift */,
+				A77AE7821B72787400F64DF1 /* Conekta.swift */,
+				A77AE7831B72787400F64DF1 /* Connection.swift */,
+				A77AE7841B72787400F64DF1 /* DeviceCollectorSDK.h */,
+				A77AE7851B72787400F64DF1 /* libDeviceCollectorLibrary.a */,
+				A77AE7861B72787400F64DF1 /* Token.swift */,
 			);
 			name = "Conekta-SDK";
 			sourceTree = "<group>";
@@ -241,10 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6713141A48E2F000C409F2 /* ViewController.swift in Sources */,
-				A77AE77C1B72753000F64DF1 /* Conekta.swift in Sources */,
-				A77AE77D1B72753000F64DF1 /* Connection.swift in Sources */,
-				A77AE77F1B72753000F64DF1 /* Token.swift in Sources */,
-				A77AE77B1B72753000F64DF1 /* Card.swift in Sources */,
+				A77AE7881B72787400F64DF1 /* Conekta.swift in Sources */,
+				A77AE7891B72787400F64DF1 /* Connection.swift in Sources */,
+				A77AE78B1B72787400F64DF1 /* Token.swift in Sources */,
+				A77AE7871B72787400F64DF1 /* Card.swift in Sources */,
 				5C6713121A48E2F000C409F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +375,7 @@
 					"$(PROJECT_DIR)",
 					"/Users/jul/Projects/Conekta/conekta-ios",
 					"/Users/jul/Projects/Conekta/conekta-ios/sdk",
+					"/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK",
 				);
 				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -393,6 +394,7 @@
 					"$(PROJECT_DIR)",
 					"/Users/jul/Projects/Conekta/conekta-ios",
 					"/Users/jul/Projects/Conekta/conekta-ios/sdk",
+					"/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK",
 				);
 				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
