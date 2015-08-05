@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Conekta.io. All rights reserved.
 //
 
-#ifndef ConektaExample_ConektaExample_Bridging_Header_h
-#define ConektaExample_ConektaExample_Bridging_Header_h
+#ifndef Conekta_Bridging_Header_h
+#define Conekta_Bridging_Header_h
 
-#import "DeviceCollector.h"
+#import "DeviceCollectorSDK.h"
 
 #endif
