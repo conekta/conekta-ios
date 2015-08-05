@@ -374,12 +374,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"/Users/jul/Projects/Conekta/conekta-ios",
-					"/Users/jul/Projects/Conekta/conekta-ios/sdk",
 					"/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK",
 				);
 				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jul/Projects/Conekta/conekta-ios/sdk/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -393,12 +392,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"/Users/jul/Projects/Conekta/conekta-ios",
-					"/Users/jul/Projects/Conekta/conekta-ios/sdk",
 					"/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK",
 				);
 				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jul/Projects/Conekta/conekta-ios/sdk/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK/Bridging-Header.h";
 			};
 			name = Release;
 		};
