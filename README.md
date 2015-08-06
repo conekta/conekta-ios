@@ -26,14 +26,25 @@ future charges.
   - Connection.swift 
   - Card.swift
   - Token.swift
+  - DeviceCollectorSDK.h
+  - libDeviceCollector.a
+  - Bridging-Header.h
+
+  NOTE: If you are working with another objective c libraries, you can copy the content on Bridging-Header.h and paste it into your bridge file, instead copy the file Bridging-Header.h
 
 2. When you add the files into your directory, add to the group/target. 
 
-3. Now, you can create an object of Conekta in your ViewController or wherever you need to add the logic. 
+3. You should update your xcodeproject file with bridging header for swift code.
+
+3.1 First go to you folder where you have the Bridging header file.
+
+3.2 Now, on your xcodeproject file, search the section: Build Settings > Swift Compile - Code Generation > Objective-C Bridging Header. Double click on value and drop the file Bridging-Header.h or your custom bridging header into the modal.
+
+4. Now, you can create an object of Conekta in your ViewController or wherever you need to add the logic. 
 
   ``var conekta = Conekta(publicKey: String) ``
 
-4. You can use a ``conekta.createToken`` bet before create an object card. 
+5. You can use a ``conekta.createToken`` bet before create an object card. 
 
   ````swift
   var card = Card(last4: "4242424242424242", name: "Test Name", cvc: "123", exp_month: "12", exp_year: "2020")
@@ -44,7 +55,7 @@ future charges.
               print("fail")
           })
   ````
-5. With those lines you can tokenize a card. 
+6. With those lines you can tokenize a card. 
 
 ## Contributing & Attribution
 

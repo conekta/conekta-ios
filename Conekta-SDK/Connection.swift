@@ -3,12 +3,12 @@
 //  
 //
 //  Created by Javier Murillo on 12/22/14.
-//
+//  Copyright (c) 2015 Conekta.io. All rights reserved.
 //
 
 import Foundation
 
-class Connection{
+class Connection {
     var data: AnyObject!
     init(data: AnyObject!){
         self.data = data
@@ -39,9 +39,22 @@ class Connection{
         }
     }
     
-    func parseJSON(responseData: NSData) -> AnyObject{
+    func parseJSON(responseData: NSData) -> AnyObject {
         var jsonError : NSError?
         let jsonResult : AnyObject? = NSJSONSerialization.JSONObjectWithData(responseData, options: nil, error: &jsonError)
         return jsonResult!
+    }
+    
+    func connection(connection: NSURLConnection, canAuthenticateAgainstProtectionSpace protectionSpace: NSURLProtectionSpace?) -> Bool {
+        return protectionSpace?.authenticationMethod == NSURLAuthenticationMethodServerTrust
+    }
+    
+    func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge?) {
+        if challenge?.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+            let credentials = NSURLCredential(forTrust: challenge!.protectionSpace.serverTrust)
+            challenge!.sender.useCredential(credentials, forAuthenticationChallenge: challenge!)
+        }
+        
+        challenge?.sender.continueWithoutCredentialForAuthenticationChallenge(challenge!)
     }
 }
