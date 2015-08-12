@@ -25,14 +25,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tokenizeCard(sender : AnyObject) {
-        var conekta = Conekta(publicKey: "key_UCmfYCRt5TdUA8ii")
+        var conekta = Conekta(publicKey: "key_UCmfYCRt5TdUA8ii0")
         
         var tarjeta = Card(last4: numberField.text, name: nameField.text, cvc: ccField.text, exp_month: expMonthField.text, exp_year: expYearField.text)
 
-        conekta.createToken(tarjeta, withSuccess: { () -> Void in
-            print("tokenizada")
-            }, withFailure: { () -> Void in
-            print("fail")
+        conekta.createToken(tarjeta, withSuccess: { (data) -> Void in
+            println("Success:")
+            println(data)
+            }, withFailure: { (error) -> Void in
+            println("Failure:")
+            println(error)
         })
         
     }

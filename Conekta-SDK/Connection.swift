@@ -19,7 +19,7 @@ class Connection {
         println("Recived  \(data)")
     }
     
-    func makeRequest(url: NSURL, action: String,  apiKeyBase64: String, body: NSData) -> Void {
+    func makeRequest(url: NSURL, action: String,  apiKeyBase64: String, body: NSData, success: (data: AnyObject) -> Void, failure: (error: NSError) -> Void) -> Void {
         
         var configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         var session = NSURLSession(configuration: configuration)
@@ -35,7 +35,11 @@ class Connection {
         request.HTTPBody = body
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            self.saveResponse(self.parseJSON(data) as AnyObject)
+            if (error != nil) {
+                failure(error: error)
+            } else {
+                success(data: self.parseJSON(data) as AnyObject)
+            }
         }
     }
     

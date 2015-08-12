@@ -29,7 +29,7 @@ class Conekta: NSObject, DeviceCollectorSDKDelegate {
         return returnValue
     }
 
-    func createToken(var card: Card, withSuccess success:()-> Void, withFailure failure:() -> Void ) {
+    func createToken(var card: Card, withSuccess success:(data: AnyObject)-> Void, withFailure failure:(error: NSError) -> Void ) {
         var data: AnyObject!
         var c = Connection(data: data)
         var device_fingerprint = self.getUUID()
@@ -37,7 +37,7 @@ class Conekta: NSObject, DeviceCollectorSDKDelegate {
         self.deviceCollect(device_fingerprint)
         card.setDeviceFingerprint(device_fingerprint)
         
-        c.makeRequest(NSURL(string: "https://api.conekta.io/tokens")!, action: "POST",  apiKeyBase64: self.apiKeyAsBase64(self.publicKey), body: card.asJSONData())
+        c.makeRequest(NSURL(string: "https://api.conekta.io/tokens")!, action: "POST",  apiKeyBase64: self.apiKeyAsBase64(self.publicKey), body: card.asJSONData(), success: success, failure: failure)
     }
     
     func deviceCollect(var device_fingerprint: String) {
