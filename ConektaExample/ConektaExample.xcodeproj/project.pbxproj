@@ -184,7 +184,9 @@
 		5C6713041A48E2F000C409F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Conekta.io;
 				TargetAttributes = {
 					5C67130B1A48E2F000C409F2 = {
@@ -307,6 +309,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -373,12 +376,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"/Users/jul/Projects/Conekta/conekta-ios",
-					"/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK",
 				);
 				New_Setting = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "conekta.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(inherit)";
 			};
 			name = Debug;
 		};
@@ -391,12 +393,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"/Users/jul/Projects/Conekta/conekta-ios",
-					"/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK",
 				);
 				New_Setting = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "conekta.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jul/Projects/Conekta/conekta-ios/Conekta-SDK/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(inherit)";
 			};
 			name = Release;
 		};
@@ -414,6 +415,7 @@
 				);
 				INFOPLIST_FILE = ConektaExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "conekta.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConektaExample.app/ConektaExample";
 			};
@@ -429,6 +431,7 @@
 				);
 				INFOPLIST_FILE = ConektaExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "conekta.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConektaExample.app/ConektaExample";
 			};

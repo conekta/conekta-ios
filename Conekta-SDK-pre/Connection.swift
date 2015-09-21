@@ -10,20 +10,21 @@ import Foundation
 
 class Connection {
     var data: AnyObject!
+    
     init(data: AnyObject!){
         self.data = data
     }
     
     func saveResponse( data: AnyObject ) -> Void{
         self.data = data
-        println("Recived  \(data)")
+        print("Recived  \(data)")
     }
     
     func makeRequest(url: NSURL, action: String,  apiKeyBase64: String, body: NSData, success: (data: AnyObject) -> Void, failure: (error: NSError) -> Void) -> Void {
         
-        var configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         var session = NSURLSession(configuration: configuration)
-        var request = NSMutableURLRequest(URL: url)
+        let request = NSMutableURLRequest(URL: url)
         var sError: NSError?
         
         request.HTTPMethod = action
@@ -34,7 +35,7 @@ class Connection {
         var headers = request.allHTTPHeaderFields!
         request.HTTPBody = body
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
             if (error != nil) {
                 failure(error: error)
             } else {
@@ -43,9 +44,17 @@ class Connection {
         }
     }
     
+    func 
+    
     func parseJSON(responseData: NSData) -> AnyObject {
         var jsonError : NSError?
-        let jsonResult : AnyObject? = NSJSONSerialization.JSONObjectWithData(responseData, options: nil, error: &jsonError)
+        let jsonResult : AnyObject?
+        do {
+            jsonResult = try NSJSONSerialization.JSONObjectWithData(responseData, options: [])
+        } catch let error as NSError {
+            jsonError = error
+            jsonResult = nil
+        }
         return jsonResult!
     }
     

@@ -30,11 +30,11 @@ class ViewController: UIViewController {
         var tarjeta = Card(last4: numberField.text, name: nameField.text, cvc: ccField.text, exp_month: expMonthField.text, exp_year: expYearField.text)
 
         conekta.createToken(tarjeta, withSuccess: { (data) -> Void in
-            println("Success:")
-            println(data)
+            print("Success:")
+            print(data)
             }, withFailure: { (error) -> Void in
-            println("Failure:")
-            println(error)
+            print("Failure:")
+            print(error)
         })
         
     }
