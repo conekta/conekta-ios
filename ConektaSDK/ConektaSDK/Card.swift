@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Card: NSObject {
+public class Card: NSObject {
     var last4: String
     var name: String
     var cvc: String
@@ -53,7 +53,7 @@ class Card: NSObject {
         }
     }
     
-    init(last4: String, name: String, cvc: String, exp_month: String, exp_year: String) {
+    public init(last4: String, name: String, cvc: String, exp_month: String, exp_year: String) {
         self.last4 = last4
         self.name = name
         self.cvc = cvc

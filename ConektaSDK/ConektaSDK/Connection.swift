@@ -8,8 +8,8 @@
 
 import Foundation
 
-typealias SuccessClosure = AnyObject? -> ()
-typealias ErrorClosure = NSError -> ()
+public typealias SuccessClosure = AnyObject? -> ()
+public typealias ErrorClosure = NSError -> ()
 
 class Connection: NSObject {
     var data: AnyObject?

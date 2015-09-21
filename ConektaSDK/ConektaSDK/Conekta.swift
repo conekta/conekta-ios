@@ -8,10 +8,10 @@
 
 import UIKit
 
-class Conekta: NSObject {
+public class Conekta: NSObject {
     private let publicKey: String
     
-    init(publicKey: String) {
+    public init(publicKey: String) {
         self.publicKey = publicKey
         
         super.init()
@@ -32,7 +32,7 @@ class Conekta: NSObject {
         return returnValue
     }
 
-    func createToken(card: Card, withSuccess success:SuccessClosure, withFailure failure:ErrorClosure) {
+    public func createToken(card: Card, withSuccess success:SuccessClosure, withFailure failure:ErrorClosure) {
         let c = Connection(data: nil)
         
         self.deviceCollect(UUID)
@@ -52,11 +52,11 @@ extension Conekta: DeviceCollectorSDKDelegate {
         dc.collect(uuid)
     }
     
-    func onCollectorStart() {}
+    public func onCollectorStart() {}
     
-    func onCollectorSuccess() {}
+    public func onCollectorSuccess() {}
     
-    func onCollectorError(errorCode: Int32, withError error: NSError!) {
+    public func onCollectorError(errorCode: Int32, withError error: NSError!) {
         print(error)
     }
 }

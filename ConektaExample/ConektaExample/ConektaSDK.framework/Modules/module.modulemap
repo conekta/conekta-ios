@@ -1,0 +1,10 @@
+framework module ConektaSDK {
+  umbrella header "ConektaSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module ConektaSDK.Swift {
+    header "ConektaSDK-Swift.h"
+}

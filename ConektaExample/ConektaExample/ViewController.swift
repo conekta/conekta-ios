@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ConektaSDK
 
 class ViewController: UIViewController {
     
@@ -25,9 +26,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tokenizeCard(sender : AnyObject) {
-        var conekta = Conekta(publicKey: "key_UCmfYCRt5TdUA8ii0")
+        let conekta = Conekta(publicKey: "key_UCmfYCRt5TdUA8ii0")
         
-        var tarjeta = Card(last4: numberField.text, name: nameField.text, cvc: ccField.text, exp_month: expMonthField.text, exp_year: expYearField.text)
+        let tarjeta = Card(last4: numberField.text!, name: nameField.text!, cvc: ccField.text!, exp_month: expMonthField.text!, exp_year: expYearField.text!)
 
         conekta.createToken(tarjeta, withSuccess: { (data) -> Void in
             print("Success:")
@@ -40,3 +41,4 @@ class ViewController: UIViewController {
     }
     
 }
+

@@ -15,6 +15,4 @@ FOUNDATION_EXPORT double ConektaSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char ConektaSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ConektaSDK/PublicHeader.h>
-
-
 #import <ConektaSDK/DeviceCollectorSDK.h>
