@@ -27,7 +27,7 @@
     Token *token = [conekta.Token initWithCard:card];
     
     [token createWithSuccess: ^(NSDictionary *data) {
-        NSLog(@"Objective C: %@", data);
+        NSLog(@"%@", data);
     } andError: ^(NSError *error) {
         NSLog(@"%@", error);
     }];
