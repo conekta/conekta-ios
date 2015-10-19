@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ConektaCardToken.xcscheme</key>
+		<key>ConektaCardToken-ObjectiveC.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A747E0631BD14C0A00343690</key>
+		<key>A7010C2F1BD583FA002FC7C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A747E07C1BD14C0A00343690</key>
+		<key>A7010C481BD583FA002FC7C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A747E0871BD14C0A00343690</key>
+		<key>A7010C531BD583FA002FC7C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

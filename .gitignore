@@ -1,3 +1,4 @@
 .DS_Store
 **/.DS_Store
-Conekta.xcworkspace/xcuserdata/jul.xcuserdatad/UserInterfaceState.xcuserstate
+Conekta.xcworkspace/xcuserdata/*.xcuserdatad
+Examples/*/ConektaCardToken-Swift.xcodeproj/xcuserdata
