@@ -1,65 +1,127 @@
-## Intro
+![alt tag](https://raw.github.com/conekta/conekta-node/master/readme_files/cover.png)
 
-Conekta iOS SDK with swift is a files necesary to tokenize Credit/Debit Cards using Conekta REST API in your iOS projects
-and make Payments with tokens, create Customers and save the tokens to Customers for
-future charges.
+Conekta iOS v 1.0.0
+======================
 
-## Table of Contents
+Wrapper to connect with https://api.conekta.io.
 
-- Intro
-- Requeriments
-- Configuration and Setup
-- Contributing & Attribution
-- License
+Conekta iOS SDK allow you tokenize card details on iOS apps, in order to prevent hit your server.
 
-## Requirements
-- Clone the repo to your Mac``git clone git@github.com:conekta/conekta-ios.git``
-- To create Tokens and make Payments directly to REST API:
-  - Xcode 6 or superior.
+## Install
+
+Via git:
+
+```sh
+$ git clone git@github.com:conekta/conekta-ios.git
+```
+
+Via Cocoapods:
+
+```sh
+```
 
 ## Configuration and Setup
 
-### Initial Configuration in XCode
+### General setup
 
-1. You need to move next files in Xcode Workspace: 
-  - Conekta.swift
-  - Connection.swift 
-  - Card.swift
-  - Token.swift
-  - DeviceCollectorSDK.h
-  - libDeviceCollector.a
-  - Bridging-Header.h
+1. Move folder Conekta into your project folder.
 
-  NOTE: If you are working with another objective c libraries, you can copy the content on Bridging-Header.h and paste it into your bridge file, instead copy the file Bridging-Header.h
+2. Create a new group called **Conekta** via xcode.
 
-2. When you add the files into your directory, add to the group/target. 
+3. Add files into **conekta** group.
 
-3. You should update your xcodeproject file with bridging header for swift code.
+4. Add into your .xcodeproj file at **Build Settings > Search Paths > Library Search Paths**, the options below:
 
-3.1 First go to you folder where you have the Bridging header file.
+* $(inherited)
+* $(PROJECT_DIR)
+* "$(SRCROOT)/Conekta"
 
-3.2 Now, on your xcodeproject file, search the section: Build Settings > Swift Compile - Code Generation > Objective-C Bridging Header. Double click on value and drop the file Bridging-Header.h or your custom bridging header into the modal.
+### Swift projects setup
 
-4. Now, you can create an object of Conekta in your ViewController or wherever you need to add the logic. 
+1. Into your .xcodeproj file at **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header**, drop the Conekta-Bridging-Header.h file located at Conekta folder
 
-  ``var conekta = Conekta(publicKey: String) ``
+## Usage
 
-5. You can use a ``conekta.createToken`` bet before create an object card. 
+### Objective C
 
-  ````swift
-  var card = Card(last4: "4242424242424242", name: "Test Name", cvc: "123", exp_month: "12", exp_year: "2020")
-  
-  conekta.createToken(card, withSuccess: { () -> Void in
-              print("tokenized")
-              }, withFailure: { () -> Void in
-              print("fail")
-          })
-  ````
-6. With those lines you can tokenize a card. 
+``objectivec
+#import "ViewController.h"
+#import "Conekta.h"
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    Conekta *conekta = [[Conekta alloc] init];
+    
+    [conekta setPublicKey:@"key_KJysdbf6PotS2ut2"];
+    
+    Card *card = [conekta.Card initWithNumber: @"4242424242424242" name: @"Julian Ceballos" cvc: @"123" expMonth: @"10" expYear: @"2018"];
+    
+    Token *token = [conekta.Token initWithCard:card];
+    
+    [token createWithSuccess: ^(NSDictionary *data) {
+        NSLog(@"%@", data);
+    } andError: ^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+    
+    
+    [super viewDidLoad];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+@end
+
+```
+
+### Swift
+
+```swift
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        let conekta = Conekta()
+        
+        conekta.publicKey = "key_KJysdbf6PotS2ut2"
+        
+        let card = conekta.Card()
+        
+        card.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
+        
+        let token = conekta.Token()
+        
+        token.card = card
+        
+        token.createWithSuccess({ (data) -> Void in
+            print(data)
+        }, andError: { (error) -> Void in
+            print(error)
+        })
+        
+        super.viewDidLoad()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+}
+```
 
 ## Contributing & Attribution
 
-Thanks to [Santiago Zavala](https://github.com/dfectuoso) for helping us to create Conekta iOS SDK.
+Thanks to [Santiago Zavala](https://github.com/dfectuoso) for helping us to create Conekta iOS SDK Swift first version.
 
 License
 -------

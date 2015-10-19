@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "container:"
-      name = "Conekta-SDK">
-      <FileRef
-         location = "group:Conekta-SDK/Bridging-Header.h">
-      </FileRef>
-      <FileRef
-         location = "group:Conekta-SDK/Card.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Conekta-SDK/Conekta.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Conekta-SDK/Connection.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Conekta-SDK/DeviceCollectorSDK.h">
-      </FileRef>
-      <FileRef
-         location = "group:Conekta-SDK/libDeviceCollectorLibrary.a">
-      </FileRef>
-      <FileRef
-         location = "group:Conekta-SDK/Token.swift">
-      </FileRef>
-   </Group>
    <FileRef
-      location = "group:ConektaExample/ConektaExample.xcodeproj">
+      location = "group:Examples/ConektaCardToken-Swift/ConektaCardToken.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Examples/ConektaCardToken-ObjectiveC/ConektaCardToken.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Conekta/Conekta.xcodeproj">
    </FileRef>
 </Workspace>
