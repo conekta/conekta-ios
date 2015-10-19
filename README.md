@@ -13,12 +13,6 @@ Via git:
 $ git clone git@github.com:conekta/conekta-ios.git
 ```
 
-Via Cocoapods:
-
-```sh
-pods 
-```
-
 ## Configuration and Setup
 
 ### General setup
