@@ -142,7 +142,20 @@ super.didReceiveMemoryWarning()
 }
 ```
 
-## Contributing & Attribution
+## Contribute
+
+### Clone repo
+
+```sh
+$ git clone https://github.com/conekta/conekta-ios
+$ cd conekta-ios
+```
+
+### Send pull requests
+
+We love pull requests, send them from your fork to branch **dev** into **conekta/conekta-ios**
+
+### Attribution
 
 Thanks to [Santiago Zavala](https://github.com/dfectuoso) for helping us to create Conekta iOS SDK Swift first version.
 
