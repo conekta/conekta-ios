@@ -78,26 +78,25 @@ If you are compiling with iOS 9, please add on your application plist the lines 
 @implementation ViewController
 
 - (void)viewDidLoad {
-Conekta *conekta = [[Conekta alloc] init];
+  Conekta *conekta = [[Conekta alloc] init];
 
-[conekta setPublicKey:@"key_KJysdbf6PotS2ut2"];
+  [conekta setPublicKey:@"key_KJysdbf6PotS2ut2"];
 
-Card *card = [conekta.Card initWithNumber: @"4242424242424242" name: @"Julian Ceballos" cvc: @"123" expMonth: @"10" expYear: @"2018"];
+  Card *card = [conekta.Card initWithNumber: @"4242424242424242" name: @"Julian Ceballos" cvc: @"123" expMonth: @"10" expYear: @"2018"];
 
-Token *token = [conekta.Token initWithCard:card];
+  Token *token = [conekta.Token initWithCard:card];
 
-[token createWithSuccess: ^(NSDictionary *data) {
-NSLog(@"%@", data);
-} andError: ^(NSError *error) {
-NSLog(@"%@", error);
-}];
+  [token createWithSuccess: ^(NSDictionary *data) {
+  NSLog(@"%@", data);
+  } andError: ^(NSError *error) {
+  NSLog(@"%@", error);
+  }];
 
-
-[super viewDidLoad];
+  [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
-[super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
 }
 
 @end
@@ -111,33 +110,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
-override func viewDidLoad() {
-let conekta = Conekta()
+  override func viewDidLoad() {
+    let conekta = Conekta()
 
-conekta.publicKey = "key_KJysdbf6PotS2ut2"
+    conekta.publicKey = "key_KJysdbf6PotS2ut2"
 
-let card = conekta.Card()
+    let card = conekta.Card()
 
-card.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
+    card.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
 
-let token = conekta.Token()
+    let token = conekta.Token()
 
-token.card = card
+    token.card = card
 
-token.createWithSuccess({ (data) -> Void in
-print(data)
-}, andError: { (error) -> Void in
-print(error)
-})
+    token.createWithSuccess({ (data) -> Void in
+      print(data)
+    }, andError: { (error) -> Void in
+      print(error)
+    })
 
-super.viewDidLoad()
-}
+    super.viewDidLoad()
+  }
 
-override func didReceiveMemoryWarning() {
-super.didReceiveMemoryWarning()
-// Dispose of any resources that can be recreated.
-}
-
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
 
 }
 ```
