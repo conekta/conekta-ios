@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Examples/ConektaCardToken-Swift/ConektaCardToken.xcodeproj">
+      location = "group:Examples/ConektaCardToken-ObjectiveC/ConektaCardToken-ObjectiveC.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Examples/ConektaCardToken-ObjectiveC/ConektaCardToken.xcodeproj">
+      location = "group:Examples/ConektaCardToken-Swift/ConektaCardToken-Swift.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Conekta/Conekta.xcodeproj">
