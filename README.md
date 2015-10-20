@@ -33,16 +33,6 @@ $ git clone git@github.com:conekta/conekta-ios.git
 #import "Conekta.h"
 ```
 
-4. Add into your .xcodeproj file at **Build Settings > Search Paths > Library Search Paths**, the options below:
-
-* $(inherited)
-* $(PROJECT_DIR)
-* "$(SRCROOT)/Conekta"
-
-### Swift projects setup
-
-1. Into your .xcodeproj file at **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header**, drop the Conekta-Bridging-Header.h file located at Conekta folder
-
 ### App Transport Security
 
 If you are compiling with iOS 9, please add on your application plist the lines below:
