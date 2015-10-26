@@ -17,19 +17,19 @@ $ git clone git@github.com:conekta/conekta-ios.git
 
 ### General setup
 
-1. Move folder Conekta into your project folder.
+* Move folder Conekta into your project folder.
 
-2. Create a new group called **Conekta** via xcode.
+* Create a new group called **Conekta** via xcode.
 
-3. On your xcodeproj, got to: Build Settings > Search Paths > Library Search Path, then double click and set the value to:
+* On your xcodeproj, got to: Build Settings > Search Paths > Library Search Path, then double click and set the value to:
 ```
 $(inherited)
 $(PROJECT_DIR)/Conekta
 ```
 
-4. Add files into **conekta** group.
+* Add files into **conekta** group.
 
-4.1 For swift projects, when you add objective c files, it will ask you to create a Bridging file, include on this file the next content:
+For swift projects, when you add objective c files, it will ask you to create a Bridging file, include on this file the next content:
 
 ```objectivec
 #import "DeviceCollectorSDK.h"
