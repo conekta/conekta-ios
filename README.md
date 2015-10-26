@@ -33,6 +33,12 @@ $ git clone git@github.com:conekta/conekta-ios.git
 #import "Conekta.h"
 ```
 
+4. On your xcodeproj, got to: Build Settings > Search Paths > Library Search Path, then double click and set the value to:
+```
+$(inherited)
+$(PROJECT_DIR)/Conekta
+```
+
 ### App Transport Security
 
 If you are compiling with iOS 9, please add on your application plist the lines below:
