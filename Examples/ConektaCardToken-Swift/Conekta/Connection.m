@@ -6,7 +6,6 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #include "Connection.h"
 
 @implementation Connection

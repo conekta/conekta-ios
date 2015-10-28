@@ -9,6 +9,8 @@
 #ifndef Conekta_h
 #define Conekta_h
 
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "Token.h"
 #import "Card.h"
 
@@ -16,8 +18,10 @@
 
 @property (nonatomic, retain) NSString *baseURI;
 @property (nonatomic, retain) NSString *publicKey;
+@property (nonatomic, retain) UIViewController *delegate;
 
-- (NSString *) deviceFingerprint; 
+- (NSString *) deviceFingerprint;
+- (void) collectDevice;
 
 /* Resources */
 - (Card *) Card;

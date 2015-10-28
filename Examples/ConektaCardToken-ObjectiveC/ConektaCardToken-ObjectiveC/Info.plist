@@ -45,16 +45,7 @@
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	  <key>NSExceptionDomains</key>
-	  <dict>
-	    <key>conekta.io</key>
-	    <dict>
-	      <key>NSIncludesSubdomains</key>
-	      <true/>                
-	      <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	      <false/>
-	    </dict>
-	  </dict>
+	  <key>NSAllowsArbitraryLoads</key><true/>
 	</dict>
 </dict>
 </plist>

@@ -9,6 +9,9 @@
 #ifndef Card_h
 #define Card_h
 
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 @interface Card : NSObject
 
 @property (nonatomic, retain) NSString *baseURI;

@@ -15,7 +15,11 @@ class ViewController: UIViewController {
 
         let conekta = Conekta()
         
+        conekta.delegate = self
+        
         conekta.publicKey = "key_KJysdbf6PotS2ut2"
+        
+        conekta.collectDevice()
         
         let card = conekta.Card()
         

@@ -18,9 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /* Initialize Conekta SDK */
+    
     Conekta *conekta = [[Conekta alloc] init];
     
+    [conekta setDelegate: self];
+    
     [conekta setPublicKey:@"key_KJysdbf6PotS2ut2"];
+    
+    [conekta collectDevice];
+    
+    /* Tokenize card */
     
     Card *card = [conekta.Card initWithNumber: @"4242424242424242" name: @"Julian Ceballos" cvc: @"123" expMonth: @"10" expYear: @"2018"];
     

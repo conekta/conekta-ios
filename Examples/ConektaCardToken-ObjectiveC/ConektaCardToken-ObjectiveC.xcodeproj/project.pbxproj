@@ -15,11 +15,10 @@
 		A7010C431BD583FA002FC7C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7010C411BD583FA002FC7C1 /* LaunchScreen.storyboard */; };
 		A7010C4E1BD583FA002FC7C1 /* ConektaCardToken_ObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C4D1BD583FA002FC7C1 /* ConektaCardToken_ObjectiveCTests.m */; };
 		A7010C591BD583FA002FC7C1 /* ConektaCardToken_ObjectiveCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C581BD583FA002FC7C1 /* ConektaCardToken_ObjectiveCUITests.m */; };
-		A7010C711BD58472002FC7C1 /* Conekta.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C671BD58472002FC7C1 /* Conekta.m */; settings = {ASSET_TAGS = (); }; };
-		A7010C721BD58472002FC7C1 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C681BD58472002FC7C1 /* Connection.m */; settings = {ASSET_TAGS = (); }; };
-		A7010C731BD58472002FC7C1 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C6B1BD58472002FC7C1 /* Token.m */; settings = {ASSET_TAGS = (); }; };
-		A7010C741BD58472002FC7C1 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C6C1BD58472002FC7C1 /* Card.m */; settings = {ASSET_TAGS = (); }; };
-		A7010C751BD58472002FC7C1 /* libDeviceCollectorLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7010C701BD58472002FC7C1 /* libDeviceCollectorLibrary.a */; settings = {ASSET_TAGS = (); }; };
+		A7010C711BD58472002FC7C1 /* Conekta.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C671BD58472002FC7C1 /* Conekta.m */; };
+		A7010C721BD58472002FC7C1 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C681BD58472002FC7C1 /* Connection.m */; };
+		A7010C731BD58472002FC7C1 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C6B1BD58472002FC7C1 /* Token.m */; };
+		A7010C741BD58472002FC7C1 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A7010C6C1BD58472002FC7C1 /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +63,6 @@
 		A7010C6C1BD58472002FC7C1 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Conekta/Card.m; sourceTree = "<group>"; };
 		A7010C6D1BD58472002FC7C1 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = Conekta/Connection.h; sourceTree = "<group>"; };
 		A7010C6E1BD58472002FC7C1 /* Conekta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conekta.h; path = Conekta/Conekta.h; sourceTree = "<group>"; };
-		A7010C6F1BD58472002FC7C1 /* DeviceCollectorSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceCollectorSDK.h; path = Conekta/DeviceCollectorSDK.h; sourceTree = "<group>"; };
-		A7010C701BD58472002FC7C1 /* libDeviceCollectorLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDeviceCollectorLibrary.a; path = Conekta/libDeviceCollectorLibrary.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7010C751BD58472002FC7C1 /* libDeviceCollectorLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +164,6 @@
 				A7010C6C1BD58472002FC7C1 /* Card.m */,
 				A7010C6D1BD58472002FC7C1 /* Connection.h */,
 				A7010C6E1BD58472002FC7C1 /* Conekta.h */,
-				A7010C6F1BD58472002FC7C1 /* DeviceCollectorSDK.h */,
-				A7010C701BD58472002FC7C1 /* libDeviceCollectorLibrary.a */,
 			);
 			name = Conekta;
 			sourceTree = "<group>";
@@ -547,6 +541,7 @@
 				A7010C5F1BD583FA002FC7C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7010C601BD583FA002FC7C1 /* Build configuration list for PBXNativeTarget "ConektaCardToken-ObjectiveCTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +550,7 @@
 				A7010C621BD583FA002FC7C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7010C631BD583FA002FC7C1 /* Build configuration list for PBXNativeTarget "ConektaCardToken-ObjectiveCUITests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +559,7 @@
 				A7010C651BD583FA002FC7C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

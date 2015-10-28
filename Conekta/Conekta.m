@@ -6,7 +6,6 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import "Conekta.h"
 
 
@@ -20,8 +19,16 @@
 
 - (NSString *) deviceFingerprint
 {
-    NSString *uuid = [[NSUUID UUID] UUIDString];
+    NSString *uuid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     return [uuid stringByReplacingOccurrencesOfString:@"-" withString:@""];
+}
+
+- (void) collectDevice {
+    NSString *html = [NSString stringWithFormat:@"<html style=\"background: blue;\"><head></head><body><script type=\"text/javascript\" src=\"https://conektaapi.s3.amazonaws.com/v0.5.0/js/conekta.js\" data-public-key=\"%@\" data-session-id=\"%@\"></script></body></html>", [self publicKey], [self deviceFingerprint]];
+    UIWebView *web = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    [web loadHTMLString:html baseURL:nil];
+    [web setScalesPageToFit:YES];
+    [self.delegate.view addSubview:web];
 }
 
 - (id) populate: (id) class

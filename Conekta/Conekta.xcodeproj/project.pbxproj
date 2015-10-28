@@ -15,16 +15,12 @@
 		A747E0C41BD18E3300343690 /* Token.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Token.m; sourceTree = "<group>"; };
 		A747E0C51BD1905200343690 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		A747E0C61BD1905900343690 /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		A7B73AC61BD58D13004AD07C /* DeviceCollectorSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceCollectorSDK.h; sourceTree = "<group>"; };
-		A7B73AC71BD58D13004AD07C /* libDeviceCollectorLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDeviceCollectorLibrary.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		A747E0A41BD1595300343690 = {
 			isa = PBXGroup;
 			children = (
-				A7B73AC61BD58D13004AD07C /* DeviceCollectorSDK.h */,
-				A7B73AC71BD58D13004AD07C /* libDeviceCollectorLibrary.a */,
 				A747E0C51BD1905200343690 /* Card.h */,
 				A747E0C61BD1905900343690 /* Card.m */,
 				A747E0AF1BD1599F00343690 /* Conekta.h */,

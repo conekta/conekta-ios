@@ -9,6 +9,9 @@
 #ifndef Connection_h
 #define Connection_h
 
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 @interface Connection : NSObject <NSURLSessionDelegate>
 
 @property (nonatomic, retain) NSURL *url;

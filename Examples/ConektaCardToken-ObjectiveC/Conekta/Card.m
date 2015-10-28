@@ -6,7 +6,6 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #include "Card.h"
 
 @implementation Card

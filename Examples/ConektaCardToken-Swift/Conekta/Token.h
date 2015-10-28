@@ -9,11 +9,12 @@
 #ifndef Token_h
 #define Token_h
 
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "Card.h"
 #import "Connection.h"
-#import "DeviceCollectorSDK.h"
 
-@interface Token : NSObject <DeviceCollectorSDKDelegate>
+@interface Token : NSObject
 
 @property (nonatomic, retain) NSString *baseURI;
 @property (nonatomic, retain) NSString* publicKey;
@@ -28,7 +29,6 @@
 - (void) createWithSuccess: (void(^)(NSDictionary *))successHandler andError: (void(^)(NSError*))errorHandler;
 
 - (NSString *) apiKeyBase64: (NSString *)api_key;
-- (void) deviceCollect;
 
 @end
 
