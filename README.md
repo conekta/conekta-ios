@@ -1,3 +1,5 @@
+![alt tag](https://raw.github.com/conekta/conekta-ios/master/readme_files/cover.png)
+
 Conekta iOS v 1.0.0
 ======================
 
