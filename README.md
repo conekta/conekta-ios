@@ -46,16 +46,7 @@ If you are compiling with iOS 9, please add on your application plist the lines 
 ```xml
 <key>NSAppTransportSecurity</key>
 <dict>
-  <key>NSExceptionDomains</key>
-  <dict>
-    <key>conekta.io</key>
-    <dict>
-      <key>NSIncludesSubdomains</key>
-      <true/>                
-      <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-      <false/>
-    </dict>
-  </dict>
+  <key>NSAllowsArbitraryLoads</key><true/>
 </dict>
 ```
 
@@ -76,7 +67,11 @@ If you are compiling with iOS 9, please add on your application plist the lines 
 - (void)viewDidLoad {
   Conekta *conekta = [[Conekta alloc] init];
 
+  [conekta setDelegate: self];
+
   [conekta setPublicKey:@"key_KJysdbf6PotS2ut2"];
+
+  [conekta collectDevice];
 
   Card *card = [conekta.Card initWithNumber: @"4242424242424242" name: @"Julian Ceballos" cvc: @"123" expMonth: @"10" expYear: @"2018"];
 
@@ -109,7 +104,11 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     let conekta = Conekta()
 
+    conekta.delegate = self
+
     conekta.publicKey = "key_KJysdbf6PotS2ut2"
+
+    conekta.collectDevice()
 
     let card = conekta.Card()
 
