@@ -34,10 +34,6 @@ $(PROJECT_DIR)/Conekta
 For swift projects, when you add objective c files, it will ask you to create a Bridging file, include on this file the next content:
 
 ```objectivec
-#import "DeviceCollectorSDK.h"
-#import "Card.h"
-#import "Token.h"
-#import "Connection.h"
 #import "Conekta.h"
 ```
 
