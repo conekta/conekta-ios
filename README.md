@@ -7,6 +7,8 @@ Wrapper to connect with https://api.conekta.io.
 
 Conekta iOS SDK allow you create token with card details on iOS apps, by preventing sensitive card data from hitting your server(More information, read PCI compliance).
 
+** IMPORTANT: If you want to use our SDK with swift, please download the branch named swift, a contribution by [reyesrichie](https://github.com/reyesrichie).**
+
 ## Install
 
 Via git:
