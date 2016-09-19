@@ -15,25 +15,22 @@ class ViewController: UIViewController {
 
         let conekta = Conekta()
         
-        conekta.delegate = self
+        conekta.viewController = self
         
         conekta.publicKey = "key_KJysdbf6PotS2ut2"
         
-        conekta.collectDevice()
+        //conekta.collectDevice()
         
-        let card = conekta.Card()
+        let card = conekta.card("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
         
-        card.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
+        let token = conekta.token(card)
         
-        let token = conekta.Token()
-        
-        token.card = card
-        
-        token.createWithSuccess({ (data) -> Void in
-            print(data)
-            }, andError: { (error) -> Void in
-                print(error)
+        token.create({ (response) in
+            print("Token response: \(response)")
         })
+        { (error) in
+            print("Token error: \(error)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
