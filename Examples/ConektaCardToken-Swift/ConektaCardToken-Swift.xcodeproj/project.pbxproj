@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CBEFF021D418EF800705729 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBEFF011D418EF800705729 /* Token.swift */; };
+		8CFD48971D41831B001AB13C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD48961D41831B001AB13C /* Card.swift */; };
+		8CFD48991D4183A8001AB13C /* Conekta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD48981D4183A7001AB13C /* Conekta.swift */; };
+		8CFD489B1D4187F1001AB13C /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFD489A1D4187F1001AB13C /* Connection.swift */; };
 		A74C8EE41BE0777700DF0A17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74C8EE31BE0777700DF0A17 /* Foundation.framework */; };
 		A753AE9F1BD588D800D269C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753AE9E1BD588D800D269C7 /* AppDelegate.swift */; };
 		A753AEA11BD588D800D269C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753AEA01BD588D800D269C7 /* ViewController.swift */; };
@@ -15,10 +19,6 @@
 		A753AEA91BD588D800D269C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A753AEA71BD588D800D269C7 /* LaunchScreen.storyboard */; };
 		A753AEB41BD588D800D269C7 /* ConektaCardToken_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753AEB31BD588D800D269C7 /* ConektaCardToken_SwiftTests.swift */; };
 		A753AEBF1BD588D900D269C7 /* ConektaCardToken_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753AEBE1BD588D900D269C7 /* ConektaCardToken_SwiftUITests.swift */; };
-		A753AED81BD589D400D269C7 /* Conekta.m in Sources */ = {isa = PBXBuildFile; fileRef = A753AECE1BD589D400D269C7 /* Conekta.m */; };
-		A753AED91BD589D400D269C7 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = A753AECF1BD589D400D269C7 /* Connection.m */; };
-		A753AEDA1BD589D400D269C7 /* Token.m in Sources */ = {isa = PBXBuildFile; fileRef = A753AED21BD589D400D269C7 /* Token.m */; };
-		A753AEDB1BD589D400D269C7 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A753AED31BD589D400D269C7 /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8CBEFF011D418EF800705729 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Token.swift; path = Conekta/Token.swift; sourceTree = "<group>"; };
+		8CFD48961D41831B001AB13C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Conekta/Card.swift; sourceTree = "<group>"; };
+		8CFD48981D4183A7001AB13C /* Conekta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conekta.swift; path = Conekta/Conekta.swift; sourceTree = "<group>"; };
+		8CFD489A1D4187F1001AB13C /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Conekta/Connection.swift; sourceTree = "<group>"; };
 		A74C8EE31BE0777700DF0A17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A753AE9B1BD588D800D269C7 /* ConektaCardToken-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ConektaCardToken-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A753AE9E1BD588D800D269C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,15 +57,6 @@
 		A753AEBA1BD588D900D269C7 /* ConektaCardToken-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConektaCardToken-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A753AEBE1BD588D900D269C7 /* ConektaCardToken_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConektaCardToken_SwiftUITests.swift; sourceTree = "<group>"; };
 		A753AEC01BD588D900D269C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A753AECD1BD589D300D269C7 /* ConektaCardToken-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConektaCardToken-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		A753AECE1BD589D400D269C7 /* Conekta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conekta.m; path = Conekta/Conekta.m; sourceTree = "<group>"; };
-		A753AECF1BD589D400D269C7 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = Conekta/Connection.m; sourceTree = "<group>"; };
-		A753AED01BD589D400D269C7 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Conekta/Card.h; sourceTree = "<group>"; };
-		A753AED11BD589D400D269C7 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Token.h; path = Conekta/Token.h; sourceTree = "<group>"; };
-		A753AED21BD589D400D269C7 /* Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Token.m; path = Conekta/Token.m; sourceTree = "<group>"; };
-		A753AED31BD589D400D269C7 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Conekta/Card.m; sourceTree = "<group>"; };
-		A753AED41BD589D400D269C7 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = Conekta/Connection.h; sourceTree = "<group>"; };
-		A753AED51BD589D400D269C7 /* Conekta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conekta.h; path = Conekta/Conekta.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,15 +141,10 @@
 		A753AECC1BD5897900D269C7 /* Conekta */ = {
 			isa = PBXGroup;
 			children = (
-				A753AECE1BD589D400D269C7 /* Conekta.m */,
-				A753AECF1BD589D400D269C7 /* Connection.m */,
-				A753AED01BD589D400D269C7 /* Card.h */,
-				A753AED11BD589D400D269C7 /* Token.h */,
-				A753AED21BD589D400D269C7 /* Token.m */,
-				A753AED31BD589D400D269C7 /* Card.m */,
-				A753AED41BD589D400D269C7 /* Connection.h */,
-				A753AED51BD589D400D269C7 /* Conekta.h */,
-				A753AECD1BD589D300D269C7 /* ConektaCardToken-Swift-Bridging-Header.h */,
+				8CFD48961D41831B001AB13C /* Card.swift */,
+				8CFD48981D4183A7001AB13C /* Conekta.swift */,
+				8CFD489A1D4187F1001AB13C /* Connection.swift */,
+				8CBEFF011D418EF800705729 /* Token.swift */,
 			);
 			name = Conekta;
 			sourceTree = "<group>";
@@ -222,21 +212,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Conekta;
 				TargetAttributes = {
 					A753AE9A1BD588D800D269C7 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 3C6QZ8FN6B;
+						LastSwiftMigration = 0800;
 					};
 					A753AEAE1BD588D800D269C7 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 3C6QZ8FN6B;
+						LastSwiftMigration = 0800;
 						TestTargetID = A753AE9A1BD588D800D269C7;
 					};
 					A753AEB91BD588D900D269C7 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 3C6QZ8FN6B;
+						LastSwiftMigration = 0800;
 						TestTargetID = A753AE9A1BD588D800D269C7;
 					};
 				};
@@ -294,11 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A753AEA11BD588D800D269C7 /* ViewController.swift in Sources */,
-				A753AEDA1BD589D400D269C7 /* Token.m in Sources */,
-				A753AED81BD589D400D269C7 /* Conekta.m in Sources */,
+				8CFD48991D4183A8001AB13C /* Conekta.swift in Sources */,
+				8CFD489B1D4187F1001AB13C /* Connection.swift in Sources */,
+				8CBEFF021D418EF800705729 /* Token.swift in Sources */,
+				8CFD48971D41831B001AB13C /* Card.swift in Sources */,
 				A753AE9F1BD588D800D269C7 /* AppDelegate.swift in Sources */,
-				A753AED91BD589D400D269C7 /* Connection.m in Sources */,
-				A753AEDB1BD589D400D269C7 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,8 +358,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -411,8 +405,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -431,6 +427,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -441,6 +438,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ConektaCardToken-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -449,8 +449,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ConektaCardToken-Swift-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -459,6 +461,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ConektaCardToken-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -467,7 +472,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ConektaCardToken-Swift-Bridging-Header.h";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -479,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConektaCardToken-Swift.app/ConektaCardToken-Swift";
 			};
 			name = Debug;
@@ -491,6 +499,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConektaCardToken-Swift.app/ConektaCardToken-Swift";
 			};
 			name = Release;
@@ -502,6 +511,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ConektaCardToken-Swift";
 				USES_XCTRUNNER = YES;
 			};
@@ -514,6 +524,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ConektaCardToken-Swift";
 				USES_XCTRUNNER = YES;
 			};
