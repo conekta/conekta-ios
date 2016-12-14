@@ -17,25 +17,15 @@ $ git clone git@github.com:conekta/conekta-ios.git
 
 ## Configuration and Setup
 
-### General setup
-
-* Move folder Conekta into your project folder.
-
-* Create a new group called **Conekta** via xcode.
-
-* On your xcodeproj, got to: Build Settings > Search Paths > Library Search Path, then double click and set the value to:
-```
-$(inherited)
-$(PROJECT_DIR)/Conekta
-```
-
 * Add files into **conekta** group.
 
-For swift projects, when you add objective c files, it will ask you to create a Bridging file, include on this file the next content:
-
+For objective-C projects you should add the next header
 ```objectivec
-#import "Conekta.h"
+#import "YourProjectName-Swift.h"
 ```
+
+
+
 
 ### App Transport Security
 
@@ -49,49 +39,6 @@ If you are compiling with iOS 9, please add on your application plist the lines 
 ```
 
 ## Usage
-
-### Objective C
-
-```objectivec
-#import "ViewController.h"
-#import "Conekta.h"
-
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-  Conekta *conekta = [[Conekta alloc] init];
-
-  [conekta setDelegate: self];
-
-  [conekta setPublicKey:@"key_KJysdbf6PotS2ut2"];
-
-  [conekta collectDevice];
-
-  Card *card = [conekta.Card initWithNumber: @"4242424242424242" name: @"Julian Ceballos" cvc: @"123" expMonth: @"10" expYear: @"2018"];
-
-  Token *token = [conekta.Token initWithCard:card];
-
-  [token createWithSuccess: ^(NSDictionary *data) {
-  NSLog(@"%@", data);
-  } andError: ^(NSError *error) {
-  NSLog(@"%@", error);
-  }];
-
-  [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-}
-
-@end
-
-```
-
 ### Swift
 
 ```swift
@@ -99,36 +46,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
-    let conekta = Conekta()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let apikey = "key_KJysdbf6PotS2ut2"
+        let card = Card(number: "4242424242424242", name: "Javier Castañeda", cvc: "123", exp_month: "10", exp_year: "2020")
+        let conekta = Conekta(apikey: apikey)
+        conekta.requestTokenFor(card) { (token, error) in
+            if let e = error{
+                print(e.localizedDescription)
+				//manage Error
+            }else{
+                dump(token)
+				//Do something with the token
+            }
+        }
+    }
 
-    conekta.delegate = self
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
-    conekta.publicKey = "key_KJysdbf6PotS2ut2"
-
-    conekta.collectDevice()
-
-    let card = conekta.Card()
-
-    card.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
-
-    let token = conekta.Token()
-
-    token.card = card
-
-    token.createWithSuccess({ (data) -> Void in
-      print(data)
-    }, andError: { (error) -> Void in
-      print(error)
-    })
-
-    super.viewDidLoad()
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
 
 }
 ```
