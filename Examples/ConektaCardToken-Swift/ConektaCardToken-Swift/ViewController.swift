@@ -15,13 +15,13 @@ class ViewController: UIViewController {
         
         let apikey = "key_KJysdbf6PotS2ut2"
         let card = Card(number: "4242424242424242", name: "Javier Castañeda", cvc: "123", exp_month: "10", exp_year: "2020")
-        let conekta = Conekta(apiKey: apikey)
-        conekta.generateTokenFor(card, success: { (token) in
-                //TODO: Do something with the token
-                print(token.id)
-            }) { (tokenError) in
-                //TODO: Do something with the error
-                print(tokenError.description)
+        let conekta = Conekta(apikey: apikey)
+        conekta.requestTokenFor(card) { (token, error) in
+            if let e = error{
+                print(e.localizedDescription)
+            }else{
+                dump(token)
+            }
         }
     }
 

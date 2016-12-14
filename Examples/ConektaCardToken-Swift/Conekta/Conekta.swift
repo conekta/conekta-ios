@@ -8,57 +8,56 @@
 
 import UIKit
 
-class Conekta: NSObject {
-    let apiKey:String
+class Conekta:NSObject{
+    let apikey:String
     
-    init(apiKey:String){
-        self.apiKey = apiKey
+    
+    init(apikey:String) {
+        self.apikey = apikey
     }
     
-    func generateTokenFor(card:Card,success:(token:Token)->Void, error:(tokenError:NSError)->Void){
-        let urlString = "https://api.conekta.io/tokens"
-        if let url = NSURL(string: urlString){
-            let request = NSMutableURLRequest(URL: url)
-            request.HTTPMethod = "POST"
-            let apiKeyBase64 = self.apiKeyAsBase64(apiKey)
-            request.addValue("Basic " + apiKeyBase64, forHTTPHeaderField: "Authorization")
-            request.addValue("application/json", forHTTPHeaderField: "Content-type")
-            request.addValue("application/vnd.conekta-v0.3.0+json", forHTTPHeaderField: "Accept")
-            request.addValue("{\"agent\":\"Conekta Conekta iOS SDK\"}", forHTTPHeaderField: "Conekta-Client-User-Agent")
-            request.HTTPBody = card.jsonData()
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithRequest(request, completionHandler: { (responseData, responseNSURL, connectionError) in
-                if let connError = connectionError{
-                    error(tokenError: connError)
-                }else{
-                    do{
-                        let responseObj = try NSJSONSerialization.JSONObjectWithData(responseData!, options: NSJSONReadingOptions(rawValue: 0)) as! [String:AnyObject]
-                        if let tokenGetted = Token.tokenFromDictionary(responseObj){
-                            success(token: tokenGetted)
+    func requestTokenFor(_ card:Card, completion:@escaping (_ token:Token?, _ error:Error?)->Void){
+        DispatchQueue.global(qos: .userInitiated).async {
+            let urlString = "https://api.conekta.io/tokens"
+            if let url = URL(string: urlString){
+                var request = URLRequest(url: url)
+                request.httpMethod = "POST"
+                let apiKeyBase64 = self.apiKeyAsBase64(self.apikey)
+                request.addValue("Basic " + apiKeyBase64, forHTTPHeaderField: "Authorization")
+                request.addValue("application/json", forHTTPHeaderField: "Content-type")
+                request.addValue("application/vnd.conekta-v0.3.0+json", forHTTPHeaderField: "Accept")
+                request.addValue("{\"agent\":\"Conekta Conekta iOS SDK\"}", forHTTPHeaderField: "Conekta-Client-User-Agent")
+                request.httpBody = card.jsonData()
+                let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, responseULR, error) in
+                    DispatchQueue.main.async {
+                        if let e = error{
+                            completion(nil, e)
                         }else{
-                            let noTokenError = NSError(domain: "NoTokenError", code: 400, userInfo: ["info":"No token object"])
-                            error(tokenError: noTokenError)
+                            do{
+                                if let connData = data, let responseJSON = try JSONSerialization.jsonObject(with: connData, options: .allowFragments) as? [String:AnyObject], let token = Token.tokenFromDictionary(responseJSON){
+                                    completion(token, nil)
+                                }else{
+                                    let e = NSError(domain: "NoToken", code: 400, userInfo: [NSLocalizedDescriptionKey:"No token object"])
+                                    completion(nil, e)
+                                }
+                            }catch let e{
+                                completion(nil ,e)
+                            }
                         }
-                    }catch let e as NSError{
-                        error(tokenError: e)
                     }
-                }
-            })
-            task.resume()
-        }else{
-            let urlError = NSError(domain: "InvalidURL", code: 400, userInfo: ["info":"The url is not reachable"])
-            error(tokenError: urlError)
+                })
+                task.resume()
+            }
         }
     }
     
-    private func apiKeyAsBase64(apikey: String) -> String {
-        let plainData: NSData = apikey.dataUsingEncoding(NSUTF8StringEncoding)!
-        let apiKeyBase64Data: NSData = plainData.base64EncodedDataWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
-        let returnValue: String = NSString(data: apiKeyBase64Data, encoding: NSUTF8StringEncoding) as! String
+    fileprivate func apiKeyAsBase64(_ apikey: String) -> String {
+        let plainData: Data = apikey.data(using: String.Encoding.utf8)!
+        let apiKeyBase64Data: Data = plainData.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue: 0))
+        let returnValue: String = NSString(data: apiKeyBase64Data, encoding: String.Encoding.utf8.rawValue) as! String
         return returnValue
     }
 }
-
 
 struct Card{
     var number: String
@@ -67,25 +66,26 @@ struct Card{
     var exp_month: String
     var exp_year: String
     
-    func jsonData()->NSData{
-        let fingerPrint = UIDevice.currentDevice().identifierForVendor
+    func jsonData()->Data{
+        let fingerPrint = UIDevice.current.identifierForVendor
         let card = ["name":self.name,
                     "number":self.number,
                     "cvc":self.cvc,
                     "exp_month":self.exp_month,
                     "exp_year":self.exp_year,
-                    "device_fingerprint":fingerPrint!.UUIDString]
+                    "device_fingerprint":fingerPrint!.uuidString]
         let params = ["card":card]
         do{
-            let jsondata = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.PrettyPrinted)
+            let jsondata = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.prettyPrinted)
             return jsondata
         }catch{
-            return NSData()
+            return Data()
         }
     }
+    
 }
 
-class Token:NSObject {
+struct Token {
     var id: String
     var livemode: Bool
     var used: Bool
@@ -94,8 +94,8 @@ class Token:NSObject {
         self.livemode = livemode
         self.used = used
     }
-    class func tokenFromDictionary(dic:[String:AnyObject]) -> Token? {
-        if let id = dic["id"] as? String, livemode = dic["livemode"] as? Bool,used = dic["used"] as? Bool{
+    static func tokenFromDictionary(_ dic:[String:AnyObject]) -> Token? {
+        if let id = dic["id"] as? String, let livemode = dic["livemode"] as? Bool,let used = dic["used"] as? Bool{
             return Token(id: id, livemode: livemode, used: used)
         }
         return nil

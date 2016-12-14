@@ -209,15 +209,18 @@
 					A753AE9A1BD588D800D269C7 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 3C6QZ8FN6B;
+						LastSwiftMigration = 0810;
 					};
 					A753AEAE1BD588D800D269C7 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 3C6QZ8FN6B;
+						LastSwiftMigration = 0810;
 						TestTargetID = A753AE9A1BD588D800D269C7;
 					};
 					A753AEB91BD588D900D269C7 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 3C6QZ8FN6B;
+						LastSwiftMigration = 0810;
 						TestTargetID = A753AE9A1BD588D800D269C7;
 					};
 				};
@@ -429,6 +432,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ConektaCardToken-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -446,6 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ConektaCardToken-Swift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -457,6 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConektaCardToken-Swift.app/ConektaCardToken-Swift";
 			};
 			name = Debug;
@@ -469,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConektaCardToken-Swift.app/ConektaCardToken-Swift";
 			};
 			name = Release;
@@ -480,6 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ConektaCardToken-Swift";
 				USES_XCTRUNNER = YES;
 			};
@@ -492,6 +500,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conekta.ConektaCardToken-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ConektaCardToken-Swift";
 				USES_XCTRUNNER = YES;
 			};
