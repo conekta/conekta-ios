@@ -1,7 +1,7 @@
-![alt tag](https://raw.github.com/conekta/conekta-ios/master/readme_files/cover.png)
+![README Cover Image](readme_cover.png)
 
 Conekta iOS v 1.0.0
-======================
+====================
 
 Wrapper to connect with https://api.conekta.io.
 
@@ -154,10 +154,9 @@ Thanks to [Santiago Zavala](https://github.com/dfectuoso) for helping us to crea
 
 License
 -------
-Developed by [Conekta](https://www.conekta.io). Available with [MIT License](LICENSE).
+Developed in Mexico by [Conekta](https://www.conekta.com) in. Available with [MIT License](LICENSE).
 
-We are hiring
--------------
+We are always hiring!
+---------------------
 
-If you are a comfortable working with a range of backend languages (Java, Python, Ruby, PHP, etc) and frameworks, you have solid foundation in data structures, algorithms and software design with strong analytical and debugging skills. 
-Send your CV, github to quieroser@conekta.io
+If you are a comfortable working with a range of backend languages (Java, Python, Ruby, PHP, etc) and frameworks, you have solid foundation in data structures, algorithms and software design with strong analytical and debugging skills. Send us your CV and GitHub to quieroser@conekta.com
