@@ -156,6 +156,8 @@ License
 -------
 Developed in Mexico by [Conekta](https://www.conekta.com) in. Available with [MIT License](LICENSE).
 
+***
+
 We are always hiring!
 ---------------------
 
