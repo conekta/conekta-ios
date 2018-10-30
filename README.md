@@ -1,7 +1,6 @@
 ![alt tag](https://raw.github.com/conekta/conekta-ios/master/readme_files/cover.png)
 
 # Conekta iOS v 1.0.0
-======================
 
 Stand allone wrapper to connect with https://api.conekta.io.
 
@@ -12,66 +11,6 @@ In order to create a brand new *Swift* implementation I have created this librar
 
 For installation you need to copy the classes on the ```Conekta``` and ```Network``` folders to your project.
 
-<<<<<<< HEAD
-```sh
-$ git clone git@github.com:conekta/conekta-ios.git
-```
-
-## Configuration and Setup
-
-* Add files into **conekta** group.
-
-For objective-C projects you should add the next header
-```objectivec
-#import "YourProjectName-Swift.h"
-```
-
-
-
-
-### App Transport Security
-
-If you are compiling with iOS 9, please add on your application plist the lines below:
-
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-  <key>NSAllowsArbitraryLoads</key><true/>
-</dict>
-```
-
-## Usage
-### Swift
-
-```swift
-import UIKit
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let apikey = "key_KJysdbf6PotS2ut2"
-        let card = Card(number: "4242424242424242", name: "Javier Castañeda", cvc: "123", exp_month: "10", exp_year: "2020")
-        let conekta = Conekta(apikey: apikey)
-        conekta.requestTokenFor(card) { (token, error) in
-            if let e = error{
-                print(e.localizedDescription)
-				//manage Error
-            }else{
-                dump(token)
-				//Do something with the token
-            }
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-=======
 # How to use 
 
 First create a card object with
@@ -95,6 +34,5 @@ Network.request(request) { (result) in
 		//TODO: Present the error to the user 
 		print(error.localizedDescription)
 	}
->>>>>>> swift-implementation
 }
 ```
