@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BA860C62188B05C008DC57E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860C52188B05C008DC57E /* AppDelegate.swift */; };
+		0BA860C82188B05C008DC57E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860C72188B05C008DC57E /* ViewController.swift */; };
+		0BA860CB2188B05C008DC57E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA860C92188B05C008DC57E /* Main.storyboard */; };
+		0BA860CD2188B05D008DC57E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BA860CC2188B05D008DC57E /* Assets.xcassets */; };
+		0BA860D02188B05D008DC57E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA860CE2188B05D008DC57E /* LaunchScreen.storyboard */; };
+		0BA860DB2188B05E008DC57E /* ConektaCardTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860DA2188B05E008DC57E /* ConektaCardTokenTests.swift */; };
+		0BA860E62188B05E008DC57E /* ConektaCardTokenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860E52188B05E008DC57E /* ConektaCardTokenUITests.swift */; };
+		0BA860F52188B09E008DC57E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860F42188B09E008DC57E /* Network.swift */; };
+		0BA860F72188B0AC008DC57E /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860F62188B0AC008DC57E /* NetworkRequest.swift */; };
+		0BA860F92188B633008DC57E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860F82188B633008DC57E /* Result.swift */; };
+		0BA860FD2188BAC3008DC57E /* CkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860FC2188BAC3008DC57E /* CkCard.swift */; };
+		0BA861002188BCF2008DC57E /* ConektaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA860FF2188BCF2008DC57E /* ConektaRequest.swift */; };
+		0BA861022188F15F008DC57E /* CkToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA861012188F15F008DC57E /* CkToken.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BA860D72188B05E008DC57E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BA860BA2188B05C008DC57E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BA860C12188B05C008DC57E;
+			remoteInfo = ConektaCardToken;
+		};
+		0BA860E22188B05E008DC57E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BA860BA2188B05C008DC57E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BA860C12188B05C008DC57E;
+			remoteInfo = ConektaCardToken;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BA860C22188B05C008DC57E /* ConektaCardToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConektaCardToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BA860C52188B05C008DC57E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0BA860C72188B05C008DC57E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0BA860CA2188B05C008DC57E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0BA860CC2188B05D008DC57E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0BA860CF2188B05D008DC57E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0BA860D12188B05D008DC57E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BA860D62188B05E008DC57E /* ConektaCardTokenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConektaCardTokenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BA860DA2188B05E008DC57E /* ConektaCardTokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConektaCardTokenTests.swift; sourceTree = "<group>"; };
+		0BA860DC2188B05E008DC57E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BA860E12188B05E008DC57E /* ConektaCardTokenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConektaCardTokenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BA860E52188B05E008DC57E /* ConektaCardTokenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConektaCardTokenUITests.swift; sourceTree = "<group>"; };
+		0BA860E72188B05E008DC57E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BA860F42188B09E008DC57E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		0BA860F62188B0AC008DC57E /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		0BA860F82188B633008DC57E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0BA860FC2188BAC3008DC57E /* CkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CkCard.swift; sourceTree = "<group>"; };
+		0BA860FF2188BCF2008DC57E /* ConektaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConektaRequest.swift; sourceTree = "<group>"; };
+		0BA861012188F15F008DC57E /* CkToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CkToken.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BA860BF2188B05C008DC57E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BA860D32188B05E008DC57E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BA860DE2188B05E008DC57E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BA860B92188B05C008DC57E = {
+			isa = PBXGroup;
+			children = (
+				0BA860C42188B05C008DC57E /* ConektaCardToken */,
+				0BA860D92188B05E008DC57E /* ConektaCardTokenTests */,
+				0BA860E42188B05E008DC57E /* ConektaCardTokenUITests */,
+				0BA860C32188B05C008DC57E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0BA860C32188B05C008DC57E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BA860C22188B05C008DC57E /* ConektaCardToken.app */,
+				0BA860D62188B05E008DC57E /* ConektaCardTokenTests.xctest */,
+				0BA860E12188B05E008DC57E /* ConektaCardTokenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0BA860C42188B05C008DC57E /* ConektaCardToken */ = {
+			isa = PBXGroup;
+			children = (
+				0BA860F32188B07B008DC57E /* Classes */,
+				0BA860C52188B05C008DC57E /* AppDelegate.swift */,
+				0BA860C72188B05C008DC57E /* ViewController.swift */,
+				0BA860C92188B05C008DC57E /* Main.storyboard */,
+				0BA860CC2188B05D008DC57E /* Assets.xcassets */,
+				0BA860CE2188B05D008DC57E /* LaunchScreen.storyboard */,
+				0BA860D12188B05D008DC57E /* Info.plist */,
+			);
+			path = ConektaCardToken;
+			sourceTree = "<group>";
+		};
+		0BA860D92188B05E008DC57E /* ConektaCardTokenTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BA860DA2188B05E008DC57E /* ConektaCardTokenTests.swift */,
+				0BA860DC2188B05E008DC57E /* Info.plist */,
+			);
+			path = ConektaCardTokenTests;
+			sourceTree = "<group>";
+		};
+		0BA860E42188B05E008DC57E /* ConektaCardTokenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0BA860E52188B05E008DC57E /* ConektaCardTokenUITests.swift */,
+				0BA860E72188B05E008DC57E /* Info.plist */,
+			);
+			path = ConektaCardTokenUITests;
+			sourceTree = "<group>";
+		};
+		0BA860F32188B07B008DC57E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0BA860FB2188BAA2008DC57E /* Conekta */,
+				0BA860FA2188BA94008DC57E /* Network */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0BA860FA2188BA94008DC57E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0BA860F42188B09E008DC57E /* Network.swift */,
+				0BA860F62188B0AC008DC57E /* NetworkRequest.swift */,
+				0BA860F82188B633008DC57E /* Result.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0BA860FB2188BAA2008DC57E /* Conekta */ = {
+			isa = PBXGroup;
+			children = (
+				0BA860FE2188BCCD008DC57E /* Conekta Models */,
+				0BA860FF2188BCF2008DC57E /* ConektaRequest.swift */,
+			);
+			path = Conekta;
+			sourceTree = "<group>";
+		};
+		0BA860FE2188BCCD008DC57E /* Conekta Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BA860FC2188BAC3008DC57E /* CkCard.swift */,
+				0BA861012188F15F008DC57E /* CkToken.swift */,
+			);
+			path = "Conekta Models";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0BA860C12188B05C008DC57E /* ConektaCardToken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BA860EA2188B05E008DC57E /* Build configuration list for PBXNativeTarget "ConektaCardToken" */;
+			buildPhases = (
+				0BA860BE2188B05C008DC57E /* Sources */,
+				0BA860BF2188B05C008DC57E /* Frameworks */,
+				0BA860C02188B05C008DC57E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConektaCardToken;
+			productName = ConektaCardToken;
+			productReference = 0BA860C22188B05C008DC57E /* ConektaCardToken.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0BA860D52188B05E008DC57E /* ConektaCardTokenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BA860ED2188B05E008DC57E /* Build configuration list for PBXNativeTarget "ConektaCardTokenTests" */;
+			buildPhases = (
+				0BA860D22188B05E008DC57E /* Sources */,
+				0BA860D32188B05E008DC57E /* Frameworks */,
+				0BA860D42188B05E008DC57E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BA860D82188B05E008DC57E /* PBXTargetDependency */,
+			);
+			name = ConektaCardTokenTests;
+			productName = ConektaCardTokenTests;
+			productReference = 0BA860D62188B05E008DC57E /* ConektaCardTokenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0BA860E02188B05E008DC57E /* ConektaCardTokenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BA860F02188B05E008DC57E /* Build configuration list for PBXNativeTarget "ConektaCardTokenUITests" */;
+			buildPhases = (
+				0BA860DD2188B05E008DC57E /* Sources */,
+				0BA860DE2188B05E008DC57E /* Frameworks */,
+				0BA860DF2188B05E008DC57E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BA860E32188B05E008DC57E /* PBXTargetDependency */,
+			);
+			name = ConektaCardTokenUITests;
+			productName = ConektaCardTokenUITests;
+			productReference = 0BA860E12188B05E008DC57E /* ConektaCardTokenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BA860BA2188B05C008DC57E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Javier Castañeda";
+				TargetAttributes = {
+					0BA860C12188B05C008DC57E = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					0BA860D52188B05E008DC57E = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 0BA860C12188B05C008DC57E;
+					};
+					0BA860E02188B05E008DC57E = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 0BA860C12188B05C008DC57E;
+					};
+				};
+			};
+			buildConfigurationList = 0BA860BD2188B05C008DC57E /* Build configuration list for PBXProject "ConektaCardToken" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0BA860B92188B05C008DC57E;
+			productRefGroup = 0BA860C32188B05C008DC57E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BA860C12188B05C008DC57E /* ConektaCardToken */,
+				0BA860D52188B05E008DC57E /* ConektaCardTokenTests */,
+				0BA860E02188B05E008DC57E /* ConektaCardTokenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BA860C02188B05C008DC57E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA860D02188B05D008DC57E /* LaunchScreen.storyboard in Resources */,
+				0BA860CD2188B05D008DC57E /* Assets.xcassets in Resources */,
+				0BA860CB2188B05C008DC57E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BA860D42188B05E008DC57E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BA860DF2188B05E008DC57E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BA860BE2188B05C008DC57E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA860C82188B05C008DC57E /* ViewController.swift in Sources */,
+				0BA861002188BCF2008DC57E /* ConektaRequest.swift in Sources */,
+				0BA860FD2188BAC3008DC57E /* CkCard.swift in Sources */,
+				0BA860F92188B633008DC57E /* Result.swift in Sources */,
+				0BA860C62188B05C008DC57E /* AppDelegate.swift in Sources */,
+				0BA860F52188B09E008DC57E /* Network.swift in Sources */,
+				0BA860F72188B0AC008DC57E /* NetworkRequest.swift in Sources */,
+				0BA861022188F15F008DC57E /* CkToken.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BA860D22188B05E008DC57E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA860DB2188B05E008DC57E /* ConektaCardTokenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BA860DD2188B05E008DC57E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA860E62188B05E008DC57E /* ConektaCardTokenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BA860D82188B05E008DC57E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BA860C12188B05C008DC57E /* ConektaCardToken */;
+			targetProxy = 0BA860D72188B05E008DC57E /* PBXContainerItemProxy */;
+		};
+		0BA860E32188B05E008DC57E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BA860C12188B05C008DC57E /* ConektaCardToken */;
+			targetProxy = 0BA860E22188B05E008DC57E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0BA860C92188B05C008DC57E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BA860CA2188B05C008DC57E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0BA860CE2188B05D008DC57E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BA860CF2188B05D008DC57E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0BA860E82188B05E008DC57E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0BA860E92188B05E008DC57E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0BA860EB2188B05E008DC57E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ConektaCardToken/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincoorbis.ConektaCardToken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0BA860EC2188B05E008DC57E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ConektaCardToken/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincoorbis.ConektaCardToken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0BA860EE2188B05E008DC57E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ConektaCardTokenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincoorbis.ConektaCardTokenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConektaCardToken.app/ConektaCardToken";
+			};
+			name = Debug;
+		};
+		0BA860EF2188B05E008DC57E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ConektaCardTokenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincoorbis.ConektaCardTokenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConektaCardToken.app/ConektaCardToken";
+			};
+			name = Release;
+		};
+		0BA860F12188B05E008DC57E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ConektaCardTokenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincoorbis.ConektaCardTokenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ConektaCardToken;
+			};
+			name = Debug;
+		};
+		0BA860F22188B05E008DC57E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ConektaCardTokenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincoorbis.ConektaCardTokenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ConektaCardToken;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BA860BD2188B05C008DC57E /* Build configuration list for PBXProject "ConektaCardToken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BA860E82188B05E008DC57E /* Debug */,
+				0BA860E92188B05E008DC57E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BA860EA2188B05E008DC57E /* Build configuration list for PBXNativeTarget "ConektaCardToken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BA860EB2188B05E008DC57E /* Debug */,
+				0BA860EC2188B05E008DC57E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BA860ED2188B05E008DC57E /* Build configuration list for PBXNativeTarget "ConektaCardTokenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BA860EE2188B05E008DC57E /* Debug */,
+				0BA860EF2188B05E008DC57E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BA860F02188B05E008DC57E /* Build configuration list for PBXNativeTarget "ConektaCardTokenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BA860F12188B05E008DC57E /* Debug */,
+				0BA860F22188B05E008DC57E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BA860BA2188B05C008DC57E /* Project object */;
+}
