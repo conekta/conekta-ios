@@ -23,16 +23,16 @@ class ViewController: UIViewController {
         
         let card = conekta.card()
         
-        card?.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
+        card?.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2020")
         
         let token = conekta.token()
         
         token?.card = card
         
         token?.create(success: { (data) -> Void in
-            print(data)
+            //print(data)
             }, andError: { (error) -> Void in
-                print(error)
+                //print(error)
         })
     }
 
@@ -43,4 +43,3 @@ class ViewController: UIViewController {
 
 
 }
-
