@@ -21,15 +21,15 @@ class ViewController: UIViewController {
         
         conekta.collectDevice()
         
-        let card = conekta.Card()
+        let card = conekta.card()
         
-        card.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
+        card?.setNumber("4242424242424242", name: "Julian Ceballos", cvc: "123", expMonth: "10", expYear: "2018")
         
-        let token = conekta.Token()
+        let token = conekta.token()
         
-        token.card = card
+        token?.card = card
         
-        token.createWithSuccess({ (data) -> Void in
+        token?.create(success: { (data) -> Void in
             print(data)
             }, andError: { (error) -> Void in
                 print(error)
