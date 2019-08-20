@@ -35,9 +35,9 @@
     Token *token = [conekta.Token initWithCard:card];
     
     [token createWithSuccess: ^(NSDictionary *data) {
-        NSLog(@"%@", data);
+       // NSLog(@"%@", data);
     } andError: ^(NSError *error) {
-        NSLog(@"%@", error);
+       // NSLog(@"%@", error);
     }];
 }
 
