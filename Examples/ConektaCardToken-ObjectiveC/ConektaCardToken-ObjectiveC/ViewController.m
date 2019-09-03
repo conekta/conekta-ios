@@ -30,14 +30,14 @@
     
     /* Tokenize card */
     
-    Card *card = [conekta.Card initWithNumber: @"4242424242424242" name: @"Julian Ceballos" cvc: @"123" expMonth: @"10" expYear: @"2018"];
+    Card *card = [conekta.Card initWithNumber: @"4242424242424242" name: @"Julian Ceballos" cvc: @"123" expMonth: @"10" expYear: @"2020"];
     
     Token *token = [conekta.Token initWithCard:card];
     
     [token createWithSuccess: ^(NSDictionary *data) {
-        NSLog(@"%@", data);
+       // NSLog(@"%@", data);
     } andError: ^(NSError *error) {
-        NSLog(@"%@", error);
+       // NSLog(@"%@", error);
     }];
 }
 
