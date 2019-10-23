@@ -41,14 +41,7 @@ For swift projects, when you add objective c files, it will ask you to create a 
 
 ### App Transport Security
 
-If you are compiling with iOS 9, please add on your application plist the lines below:
-
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-  <key>NSAllowsArbitraryLoads</key><true/>
-</dict>
-```
+For development purposes, set NSAppTransportSecurity to true and for production, set it to false or remove it.
 
 ## Usage
 
