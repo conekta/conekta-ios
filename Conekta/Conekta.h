@@ -13,12 +13,14 @@
 #import <Foundation/Foundation.h>
 #import "Token.h"
 #import "Card.h"
+#import <WebKit/WebKit.h>
 
 @interface Conekta : NSObject
 
 @property (nonatomic, retain) NSString *baseURI;
 @property (nonatomic, retain) NSString *publicKey;
 @property (nonatomic, retain) UIViewController *delegate;
+@property (strong, nonatomic) WKWebView *webView;
 
 - (NSString *) deviceFingerprint;
 - (void) collectDevice;

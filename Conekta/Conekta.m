@@ -25,10 +25,12 @@
 
 - (void) collectDevice {
     NSString *html = [NSString stringWithFormat:@"<html style=\"background: blue;\"><head></head><body><script type=\"text/javascript\" src=\"https://conektaapi.s3.amazonaws.com/v0.5.0/js/conekta.js\" data-conekta-public-key=\"%@\" data-conekta-session-id=\"%@\"></script></body></html>", [self publicKey], [self deviceFingerprint]];
-    UIWebView *web = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-    [web loadHTMLString:html baseURL:nil];
-    [web setScalesPageToFit:YES];
-    [self.delegate.view addSubview:web];
+    WKWebViewConfiguration *theConfiguration = [[WKWebViewConfiguration alloc] init];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) configuration:theConfiguration];
+    NSURL *nsurl=[NSURL URLWithString:html];
+    NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
+    [webView loadRequest:nsrequest];
+    [self.delegate.view addSubview:webView];
 }
 
 - (id) populate: (id) class
