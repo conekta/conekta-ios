@@ -1,13 +1,13 @@
-![alt tag](https://raw.github.com/conekta/conekta-ios/master/readme_files/cover.png)
+![alt tag](https://raw.github.com/conekta/conekta-ios/master/readme_files/cover.jpg)
 
-Conekta iOS v 1.0.0
+Conekta iOS v 1.1.0
 ======================
 
 Wrapper to connect with https://api.conekta.io.
 
 Conekta iOS SDK allow you create token with card details on iOS apps, by preventing sensitive card data from hitting your server(More information, read PCI compliance).
 
-## IMPORTANT: If you want to use our SDK with swift, please download the branch named [swift](https://github.com/conekta/conekta-ios/blob/swift), a contribution by [reyesrichie](https://github.com/reyesrichie).
+## IMPORTANT: If you want to use our SDK with swift, please download the branch named [master](https://github.com/conekta/conekta-ios).
 
 ## Install
 

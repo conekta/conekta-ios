@@ -37,13 +37,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="PPu-te-vox" userLabel="Stack NumberCard">
                                         <rect key="frame" x="20" y="111.5" width="280" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Número de tarjeta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-oC-QC0">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de tarjeta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-oC-QC0">
                                                 <rect key="frame" x="0.0" y="0.0" width="143" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4242424242424242" borderStyle="roundedRect" placeholder="Número de Tarjeta" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="aV5-ch-AFI">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4242424242424242" borderStyle="roundedRect" placeholder="Número de Tarjeta" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="aV5-ch-AFI">
                                                 <rect key="frame" x="144" y="0.0" width="136" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
