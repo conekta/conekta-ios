@@ -23,12 +23,14 @@ NSString *const kPublicKeyPEM = @"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w
 - (void)setNumber:(NSString *)number name:(NSString *)name cvc:(NSString *)cvc expMonth:(NSString *)expMonth expYear:(NSString *)expYear {
     NSString *encryptedNumber = [self encryptWithPublicKey:number];
     NSString *encryptedCvc = [self encryptWithPublicKey:cvc];
+    NSString *encryptedExpMonth = [self encryptWithPublicKey:expMonth];
+    NSString *encryptedExpYear = [self encryptWithPublicKey:expYear];
     
     [self setNumber:encryptedNumber];
     [self setName:name];
     [self setCvc:encryptedCvc];
-    [self setExpMonth:expMonth];
-    [self setExpYear:expYear];
+    [self setExpMonth:encryptedExpMonth];
+    [self setExpYear:encryptedExpYear];
 }
 
 - (NSString *)encryptWithPublicKey:(NSString *)plainText {
