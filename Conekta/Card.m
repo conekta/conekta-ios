@@ -25,9 +25,10 @@ NSString *const kPublicKeyPEM = @"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w
     NSString *encryptedCvc = [self encryptWithPublicKey:cvc];
     NSString *encryptedExpMonth = [self encryptWithPublicKey:expMonth];
     NSString *encryptedExpYear = [self encryptWithPublicKey:expYear];
+    NSString *encryptedName = [self encryptWithPublicKey:name];
     
     [self setNumber:encryptedNumber];
-    [self setName:name];
+    [self setName:encryptedName];
     [self setCvc:encryptedCvc];
     [self setExpMonth:encryptedExpMonth];
     [self setExpYear:encryptedExpYear];
